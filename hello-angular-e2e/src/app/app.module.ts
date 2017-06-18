@@ -10,11 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 //import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent }         from './app.component';
-import { DashboardComponent }   from './dashboard.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroService }          from './hero.service';
-import { HeroSearchComponent }  from './hero-search.component';
+import { WelcomeComponent }   from './welcome.component';
+//import { HeroesComponent }      from './heroes.component';
+//import { HeroDetailComponent }  from './hero-detail.component';
+import { WelcomeService }          from './welcome.service';
+//import { HeroSearchComponent }  from './hero-search.component';
 
 @NgModule({
   imports: [
@@ -28,12 +28,12 @@ import { HeroSearchComponent }  from './hero-search.component';
   declarations: [
     //declare list of all component here....
     AppComponent,
-    DashboardComponent,
-    HeroDetailComponent,
-    HeroesComponent,
-    HeroSearchComponent
+    WelcomeComponent,
+  //  HeroDetailComponent,
+ //   HeroesComponent,
+ //   HeroSearchComponent
   ],
-  providers: [ HeroService ], //declare list of services into providers...
+  providers: [ WelcomeService ], //declare list of services into providers...
   bootstrap: [ AppComponent ]  //bootstraping the main component which gets loaded when application starts.
 })
 export class AppModule { }

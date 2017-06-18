@@ -5,7 +5,7 @@ import { Router }            from '@angular/router';
 import { WelcomeService }         from './welcome.service';
 
 @Component({
-  selector: 'my-heroes',
+  selector: 'welcome',
   templateUrl: './welcome.component.html',
   styleUrls: [ './welcome.component.css' ]
 })
