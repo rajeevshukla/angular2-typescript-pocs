@@ -10,47 +10,44 @@ import { WelcomeService }         from './welcome.service';
   styleUrls: [ './welcome.component.css' ]
 })
 export class WelcomeComponent implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
-
-  constructor(
+    constructor(
     private welcomeService: WelcomeService,
     private router: Router) { }
 
   getHeroes(): void {
-    this.welcomeService
+ /*   this.welcomeService
         .getHeroes()
-        .then(heroes => this.heroes = heroes);
+        .then(heroes => this.heroes = heroes); */
   }
 
   add(name: string): void {
-    name = name.trim();
+   /* name = name.trim();
     if (!name) { return; }
     this.welcomeService.create(name)
       .then(hero => {
         this.heroes.push(hero);
         this.selectedHero = null;
-      });
+      }); */
   }
 
-  delete(hero: Hero): void {
-    this.welcomeService
+  delete(/*hero: Hero*/): void {
+    /*this.welcomeService
         .delete(hero.id)
         .then(() => {
           this.heroes = this.heroes.filter(h => h !== hero);
           if (this.selectedHero === hero) { this.selectedHero = null; }
-        });
+        });*/
   }
 
   ngOnInit(): void {
-    this.getHeroes();
+    //this.getHeroes();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
+  onSelect(/*hero: Hero*/): void {
+    //this.selectedHero = hero;
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedHero.id]);
+    this.router.navigate(['/detail', 1/*this.selectedHero.id*/]);
   }
 }
